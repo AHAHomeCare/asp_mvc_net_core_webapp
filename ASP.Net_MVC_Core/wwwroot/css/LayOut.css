@@ -52,3 +52,31 @@ menu_container .menu_item{
 .menu_container .menu_item .item:hover {
     background-color: #98AFC7;
 }
+.list_container
+{
+    padding:5px;
+}
+    .list_container .title {
+        font-size:2em;
+        font-weight:bold;
+    }
+    .list_container .data_grid {
+        margin-top:2px;
+    }
+    .list_container .data_grid table {
+        border:1px solid blue;
+        width:100%;
+    }
+        .list_container .data_grid table tr {
+            border: 1px solid blue;
+        }
+
+        .list_container .data_grid table th{
+            border: 1px solid blue;
+            font-weight:bold;
+            font-size:1,2em;
+            text-align:center;
+        }
+        .list_container .data_grid table td {
+            border: 1px solid blue;
+        }

@@ -1,4 +1,29 @@
 ﻿<Properties StartupConfiguration="{31E01FE4-3032-4A82-9B86-F8D118C75698}|http">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/net5.0/ASP.Net_MVC_Core.GlobalUsings.g.cs">
+    <Files>
+      <File FileName="Views/Student/Student.cshtml" Line="1" Column="39" />
+      <File FileName="Models/Student.cs" Line="20" Column="2" />
+      <File FileName="Views/Shared/_menu.cshtml" Line="9" Column="9" />
+      <File FileName="wwwroot/css/LayOut.css" Line="54" Column="2" />
+      <File FileName="Views/Shared/_LayoutMaster.cshtml" Line="24" Column="30" />
+      <File FileName="Views/Student/Index.cshtml" Line="6" Column="32" />
+      <File FileName="obj/Debug/net5.0/ASP.Net_MVC_Core.GlobalUsings.g.cs" Line="13" Column="34" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASP.Net_MVC_Core">
+            <Node name="ASP.Net_MVC_Core" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
