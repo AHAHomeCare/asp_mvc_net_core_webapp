@@ -12,5 +12,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Student\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Student\" />
   </ItemGroup>
 </Project>
