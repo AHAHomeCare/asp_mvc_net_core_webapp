@@ -52,3 +52,30 @@ menu_container .menu_item{
 .menu_container .menu_item .item:hover {
     background-color: #98AFC7;
 }
+.right
+{
+   
+}
+.student_info {
+    margin:2px;
+    padding:5px;
+    border: 1px solid blue;
+}
+.student_info_title{
+    font-size: 2em;
+    font-weight: bold;
+}
+.data_grid {
+    border:1px solid blue;
+    width:100%;
+}
+.data_grid tr {
+    border: 1px solid blue;
+    text-align:center;
+}
+.data_grid th {
+    border: 1px solid blue;
+}
+.data_grid td {
+        border: 1px solid blue;
+    }

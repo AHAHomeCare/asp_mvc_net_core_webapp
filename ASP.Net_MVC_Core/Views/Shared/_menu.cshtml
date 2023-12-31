@@ -1,12 +1,14 @@
 ﻿<div class="menu_container container">
     <div class="menu_title">
-        Quản lý sinh
+        Quản lý sinh viên
     </div>
     <div class="menu_item">
         <div class="row item">
-            @Html.ActionLink("Lớp học", "index", "student")
+            @Html.ActionLink("Danh sách sinh viên", "index", "student")
         </div>
-        
+        <div class="row item">
+            @Html.ActionLink("Lý lich SV", "info", "student")
+        </div>
         <div class="row item">
             @Html.ActionLink("Môn học", "course", "student")
         </div>

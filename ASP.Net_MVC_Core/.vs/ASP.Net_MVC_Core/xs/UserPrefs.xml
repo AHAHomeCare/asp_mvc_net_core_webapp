@@ -1,4 +1,26 @@
 ﻿<Properties StartupConfiguration="{31E01FE4-3032-4A82-9B86-F8D118C75698}|http">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASP.Net_MVC_Core">
+            <Node name="ASP.Net_MVC_Core">
+              <Node name="Models" expanded="True" />
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+                <Node name="images" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

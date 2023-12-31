@@ -1,0 +1,29 @@
+﻿@model List<ASP.Net_MVC_Core.Models.Student>
+
+<div class="list_container">
+    <div class="title">Danh sách sinh viên </div>
+    <div>
+        <table class="data_grid">
+            <tr>
+                <th>Mã SV</th>
+                <th>Họ và tên</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+            </tr>
+            @{
+                if (Model !=null && Model.Any())
+                {
+                    foreach (var item in Model)
+                    {
+                        <td>@item.id</td>
+                        <td>@item.name</td>
+                        <td>@item.birthday.Value.ToString("{dd/MM/yyyy}")</td>
+                        <td>@item.address_full</td>
+                    }
+                }
+
+            }
+        </table>
+    </div>
+
+</div>
