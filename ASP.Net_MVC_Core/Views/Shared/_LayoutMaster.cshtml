@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LayOut.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/ASP.Net_MVC_Core.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="head container">
+        <div class="row">
+            <div class="col-12">
+                @Html.Partial("_HeadPage")
+            </div>
+        </div>
+    </div>
+    <div class="body container">
+        <div class="row">
+            <div class="left col-3">@Html.Partial("_menu")</div>
+            <div class="right col-9">@RenderBody()</div>
+        </div>
+        
+      
+    </div>
+    @*Partial View Foot Contain*@
+    <div class="foot container">
+        <div class="row">
+            <div class="col-12">
+               @Html.Partial("_FootPage")
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
