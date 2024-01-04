@@ -4,25 +4,22 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Student/Info.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/StudentController.cs">
     <Files>
-      <File FileName="Views/Student/Info.cshtml" Line="9" Column="7" />
+      <File FileName="Controllers/StudentController.cs" Line="26" Column="10" />
+      <File FileName="Models/Student.cs" Line="20" Column="30" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASP.Net_MVC_Core">
             <Node name="ASP.Net_MVC_Core">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Views">
-                <Node name="Shared" expanded="True" />
-                <Node name="Student">
-                  <Node name="Info.cshtml" selected="True" />
-                </Node>
+              <Node name="Controllers">
+                <Node name="StudentController.cs" selected="True" />
               </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
+              <Node name="Views">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
