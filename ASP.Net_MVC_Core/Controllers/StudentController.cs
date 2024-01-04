@@ -18,9 +18,28 @@ namespace ASP.Net_MVC_Core.Controllers
         }
         public IActionResult Info(int id)
         {
+
             ViewBag.student_id = id;
             var student = new Student(id);
             return View(student);
+
+        }
+        public IActionResult class_student(int id)
+        {
+            return View();
+        }
+        public IActionResult course(int id)
+        {
+            return View();
+        }
+        public IActionResult point(int id)
+        {
+            return View();
+        }
+        public IActionResult edu_result(int id)
+        {
+            return View();
+
         }
     }
 }

@@ -19,7 +19,9 @@ namespace ASP.Net_MVC_Core.Models
 		}
         public Student(int id)
         {
+
 			this.id = id;
+
             this.name = string.Empty;
             this.birthday = new DateTime(1900, 01, 01);
             this.address_id = 0;
