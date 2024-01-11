@@ -11,9 +11,16 @@ namespace ASP.Net_MVC_Core.Controllers
     public class StudentController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            return View();
+            var studentHelper = new StudentHelper();
+            List<Student> dataItems = new List<Student>();
+            if(id==0)
+                dataItems = studentHelper.initStudent();
+            else
+                 dataItems = studentHelper.getStudentItem(id);
+
+            return View(dataItems);
         }
         public IActionResult Info(int id)
         {

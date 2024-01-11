@@ -1,32 +1,3 @@
-﻿<Properties StartupConfiguration="{31E01FE4-3032-4A82-9B86-F8D118C75698}|http">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/StudentController.cs">
-    <Files>
-      <File FileName="Controllers/StudentController.cs" Line="26" Column="10" />
-      <File FileName="Models/Student.cs" Line="20" Column="30" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="ASP.Net_MVC_Core">
-            <Node name="ASP.Net_MVC_Core">
-              <Node name="Controllers">
-                <Node name="StudentController.cs" selected="True" />
-              </Node>
-              <Node name="Views">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupConfiguration="{8AB8D515-058B-454E-89BA-0D6E7E142340}|http">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
