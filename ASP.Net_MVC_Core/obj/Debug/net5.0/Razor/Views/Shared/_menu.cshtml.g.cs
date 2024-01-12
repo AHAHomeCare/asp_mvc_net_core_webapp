@@ -37,48 +37,48 @@ using ASP.Net_MVC_Core.Models;
         {
             WriteLiteral("<div class=\"menu_container container\">\n    <div class=\"menu_title\">\n        Quản lý sinh\n    </div>\n    <div class=\"menu_item\">\n        <div class=\"row item\">\n            ");
 #nullable restore
-#line (7,14)-(7,68) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
-Write(Html.ActionLink("Lớp học", "class_student", "student"));
+#line 7 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
+       Write(Html.ActionLink("Lớp học", "class_student", "student"));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("\n        </div>\n        <div class=\"row item\">\n            ");
 #nullable restore
-#line (10,14)-(10,62) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
-Write(Html.ActionLink("Sinh viên", "index", "student"));
+#line 10 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
+       Write(Html.ActionLink("Sinh viên", "index", "student"));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("\n        </div>\n        <div class=\"row item\">\n            ");
 #nullable restore
-#line (13,14)-(13,69) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
-Write(Html.ActionLink("Lý lịch sinh viên", "info", "student"));
+#line 13 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
+       Write(Html.ActionLink("Lý lịch sinh viên", "info", "student"));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("\n        </div>\n        <div class=\"row item\">\n            ");
 #nullable restore
-#line (16,14)-(16,61) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
-Write(Html.ActionLink("Môn học", "course", "student"));
+#line 16 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
+       Write(Html.ActionLink("Môn học", "course", "student"));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("\n        </div>\n        <div class=\"row item\">\n            ");
 #nullable restore
-#line (19,14)-(19,57) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
-Write(Html.ActionLink("Điểm", "point", "student"));
+#line 19 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
+       Write(Html.ActionLink("Điểm", "point", "student"));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("\n        </div>\n        <div class=\"row item\">\n            ");
 #nullable restore
-#line (22,14)-(22,73) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
-Write(Html.ActionLink("Kết quả học tập", "edu_result", "student"));
+#line 22 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/_menu.cshtml"
+       Write(Html.ActionLink("Kết quả học tập", "edu_result", "student"));
 
 #line default
 #line hidden

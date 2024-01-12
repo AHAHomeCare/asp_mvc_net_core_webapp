@@ -61,32 +61,32 @@ using ASP.Net_MVC_Core.Models;
 #nullable disable
             WriteLiteral("                            <tr>\n                                <td>");
 #nullable restore
-#line (20,38)-(20,45) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
-Write(item.id);
+#line 20 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
+                               Write(item.id);
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</td>\n                                <td>");
 #nullable restore
-#line (21,38)-(21,47) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
-Write(item.name);
+#line 21 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
+                               Write(item.name);
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</td>\n                                <td>");
 #nullable restore
-#line (22,38)-(22,80) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
-Write(item.birthday.Value.ToString("dd/MM/yyyy"));
+#line 22 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
+                               Write(item.birthday.Value.ToString("dd/MM/yyyy"));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</td>\n                                <td>");
 #nullable restore
-#line (23,38)-(23,55) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
-Write(item.address_full);
+#line 23 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Index.cshtml"
+                               Write(item.address_full);
 
 #line default
 #line hidden

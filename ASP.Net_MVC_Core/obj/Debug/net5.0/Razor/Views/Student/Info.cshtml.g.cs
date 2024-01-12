@@ -38,32 +38,32 @@ using ASP.Net_MVC_Core.Models;
             WriteLiteral("\n");
             WriteLiteral("<div class=\"student_info\">\n    <div class=\"student_info_title\">Thông tin Sinh Viên </div>\n    <div>Mã Sinh Viên:  ");
 #nullable restore
-#line (5,26)-(5,52) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
-Write(Html.DisplayFor(m => m.id));
+#line 5 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
+                   Write(Html.DisplayFor(m => m.id));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</div>\n    <div>Tên Sinh Viên: ");
 #nullable restore
-#line (6,26)-(6,54) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
-Write(Html.DisplayFor(m => m.name));
+#line 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
+                   Write(Html.DisplayFor(m => m.name));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral(" </div>\n    <div>Ngày sinh: ");
 #nullable restore
-#line (7,22)-(7,54) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
-Write(Html.DisplayFor(m => m.birthday));
+#line 7 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
+               Write(Html.DisplayFor(m => m.birthday));
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</div>\n    <div>Địa chỉ: ");
 #nullable restore
-#line (8,20)-(8,56) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
-Write(Html.DisplayFor(m => m.address_full));
+#line 8 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Student/Info.cshtml"
+             Write(Html.DisplayFor(m => m.address_full));
 
 #line default
 #line hidden

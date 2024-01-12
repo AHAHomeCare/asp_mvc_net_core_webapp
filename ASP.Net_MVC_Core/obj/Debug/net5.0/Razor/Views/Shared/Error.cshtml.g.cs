@@ -54,8 +54,8 @@ using ASP.Net_MVC_Core.Models;
 #nullable disable
             WriteLiteral("    <p>\n        <strong>Request ID:</strong> <code>");
 #nullable restore
-#line (12,45)-(12,60) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/Error.cshtml"
-Write(Model.RequestId);
+#line 12 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Shared/Error.cshtml"
+                                      Write(Model.RequestId);
 
 #line default
 #line hidden

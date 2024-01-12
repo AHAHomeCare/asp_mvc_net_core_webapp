@@ -45,7 +45,7 @@ using ASP.Net_MVC_Core.Models;
 #nullable disable
             WriteLiteral("<h1>");
 #nullable restore
-#line (4,6)-(4,23) 6 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Home/Privacy.cshtml"
+#line 4 "/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Views/Home/Privacy.cshtml"
 Write(ViewData["Title"]);
 
 #line default

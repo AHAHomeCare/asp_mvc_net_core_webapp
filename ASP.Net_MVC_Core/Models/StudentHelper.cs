@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using System.Collections.Generic;
 namespace ASP.Net_MVC_Core.Models
 {
 	public class StudentHelper
