@@ -84,3 +84,4 @@
 /Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/obj/Debug/net5.0/ASP.Net_MVC_Core.pdb
 /Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/obj/Debug/net5.0/ASP.Net_MVC_Core.genruntimeconfig.cache
 /Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/obj/Debug/net5.0/ref/ASP.Net_MVC_Core.dll
+/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/obj/Debug/net5.0/ASP.Net_MVC_Core.sourcelink.json

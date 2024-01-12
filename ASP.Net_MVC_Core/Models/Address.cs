@@ -20,7 +20,7 @@ namespace ASP.Net_MVC_Core.Models
         public Nullable<DateTime> created_at { get; set; }
         public string created_by { get; set; }
         public Nullable<DateTime> updated_at { get; set; }
-        public string updated_by { get; set; }
+        
     }
 }
 

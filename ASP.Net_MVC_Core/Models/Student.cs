@@ -27,7 +27,7 @@ namespace ASP.Net_MVC_Core.Models
         public int address_id { get; set; }
         public virtual Address address { get; set; }
 
-		public virtual ICollection<Student> Students { get; set; }
+		public virtual ICollection<StudentMark> StudentMarks { get; set; }
 
 		public Student()
 		{

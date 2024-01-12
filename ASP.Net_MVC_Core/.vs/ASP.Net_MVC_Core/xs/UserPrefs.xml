@@ -1,3 +1,33 @@
 ﻿<Properties StartupConfiguration="{8AB8D515-058B-454E-89BA-0D6E7E142340}|http">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/20240111102221_init_03.cs">
+    <Files>
+      <File FileName="DataBase/StudentContext.cs" Line="30" Column="2" />
+      <File FileName="Models/Address.cs" Line="23" Column="9" />
+      <File FileName="Migrations/20240111102221_init_03.cs" Line="93" Column="37" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ASP.Net_MVC_Core">
+            <Node name="ASP.Net_MVC_Core">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" expanded="True" />
+              </Node>
+              <Node name="DataBase" expanded="True" />
+              <Node name="Migrations" expanded="True">
+                <Node name="20240111102221_init_03.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Firefox.app" />
 </Properties>
