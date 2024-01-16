@@ -3,10 +3,52 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ASP.Net_MVC_Core.Migrations
 {
-    public partial class init_01 : Migration
+    public partial class khoi_tao_lan_1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "D_ADDRESS",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    province_id = table.Column<int>(type: "int", nullable: false),
+                    province_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    district_id = table.Column<int>(type: "int", nullable: false),
+                    district_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ward_id = table.Column<int>(type: "int", nullable: false),
+                    ward_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    number = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    status = table.Column<int>(type: "int", nullable: false),
+                    created_at = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    created_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "datetime2", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_D_ADDRESS", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "D_SUBJECT",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    status = table.Column<int>(type: "int", nullable: false),
+                    created_at = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    created_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    updated_at = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    updated_by = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_D_SUBJECT", x => x.id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "D_STUDENT",
                 columns: table => new
@@ -23,8 +65,7 @@ namespace ASP.Net_MVC_Core.Migrations
                     updated_at = table.Column<DateTime>(type: "datetime2", nullable: true),
                     updated_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     address_id = table.Column<int>(type: "int", nullable: false),
-                    addressid = table.Column<int>(type: "int", nullable: true),
-                    Studentid = table.Column<int>(type: "int", nullable: true)
+                    addressid = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -35,31 +76,6 @@ namespace ASP.Net_MVC_Core.Migrations
                         principalTable: "D_ADDRESS",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_D_STUDENT_D_STUDENT_Studentid",
-                        column: x => x.Studentid,
-                        principalTable: "D_STUDENT",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Subject",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    description = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    status = table.Column<int>(type: "int", nullable: false),
-                    created_at = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    created_by = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    updated_at = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    updated_by = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Subject", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -69,7 +85,7 @@ namespace ASP.Net_MVC_Core.Migrations
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     student_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    studentid = table.Column<int>(type: "int", nullable: true),
+                    studentid = table.Column<int>(type: "int", nullable: false),
                     subject_id = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     subjectid = table.Column<int>(type: "int", nullable: true),
                     mark = table.Column<decimal>(type: "decimal(2,2)", nullable: false),
@@ -87,11 +103,11 @@ namespace ASP.Net_MVC_Core.Migrations
                         column: x => x.studentid,
                         principalTable: "D_STUDENT",
                         principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_D_STUDENT_MARK_Subject_subjectid",
+                        name: "FK_D_STUDENT_MARK_D_SUBJECT_subjectid",
                         column: x => x.subjectid,
-                        principalTable: "Subject",
+                        principalTable: "D_SUBJECT",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -100,11 +116,6 @@ namespace ASP.Net_MVC_Core.Migrations
                 name: "IX_D_STUDENT_addressid",
                 table: "D_STUDENT",
                 column: "addressid");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_D_STUDENT_Studentid",
-                table: "D_STUDENT",
-                column: "Studentid");
 
             migrationBuilder.CreateIndex(
                 name: "IX_D_STUDENT_MARK_studentid",
@@ -126,7 +137,10 @@ namespace ASP.Net_MVC_Core.Migrations
                 name: "D_STUDENT");
 
             migrationBuilder.DropTable(
-                name: "Subject");
+                name: "D_SUBJECT");
+
+            migrationBuilder.DropTable(
+                name: "D_ADDRESS");
         }
     }
 }

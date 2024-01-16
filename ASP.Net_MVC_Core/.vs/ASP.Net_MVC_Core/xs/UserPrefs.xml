@@ -1,14 +1,28 @@
 ﻿<Properties StartupConfiguration="{8AB8D515-058B-454E-89BA-0D6E7E142340}|http">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/20240115094549_update_model_student_calendar.cs">
+    <Files>
+      <File FileName="Models/Address.cs" />
+      <File FileName="Models/Student.cs" />
+      <File FileName="Models/StudentMark.cs" />
+      <File FileName="Models/Subject.cs" />
+      <File FileName="DataBase/StudentContext.cs" />
+      <File FileName="Models/StudentCalendar.cs" />
+      <File FileName="Migrations/20240115094549_update_model_student_calendar.cs" Line="11" Column="42" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ASP.Net_MVC_Core">
-            <Node name="ASP.Net_MVC_Core" selected="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="FrameworkReferences" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
+          <Node name="ASP.Net_MVC_Core" selected="True">
+            <Node name="ASP.Net_MVC_Core">
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -16,10 +30,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Firefox.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

@@ -11,21 +11,23 @@ namespace ASP.Net_MVC_Core.Controllers
     public class StudentController : Controller
     {
         // GET: /<controller>/
-        public IActionResult Index(int id)
+        public IActionResult Index()
         {
             var studentHelper = new StudentHelper();
-            List<Student> dataItems = new List<Student>();
-            if(id==0)
-                dataItems = studentHelper.initStudent();
-            else
-                 dataItems = studentHelper.getStudentItem(id);
-
+            var dataItems = studentHelper.getStudentItems();
             return View(dataItems);
         }
         public IActionResult Info(int id)
         {
-            var item = new Student(id);
-            return View(item);
+            if (id != 0 && id != null)
+            {
+                var studentHelper = new StudentHelper();
+                var dataItem = studentHelper.getStudentItem(id);
+                return View(dataItem);
+            }
+            ViewBag.msg = "Không tìm thấy data";
+            return View();
+            
         }
         public IActionResult class_student(int id)
         {

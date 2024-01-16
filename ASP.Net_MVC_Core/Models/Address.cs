@@ -10,11 +10,12 @@ namespace ASP.Net_MVC_Core.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 		public int province_id { get; set; }
+		[MaxLength(100)]
 		public string province_name { get; set; }
 		public int district_id { get; set; }
 		public string district_name { get; set; }
 		public int ward_id { get; set; }
-		public string ward_name { get; set; }
+		public string? ward_name { get; set; }
 		public string number { get; set; }
 		public int status { get; set; }
         public Nullable<DateTime> created_at { get; set; }

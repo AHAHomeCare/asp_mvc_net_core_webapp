@@ -9,7 +9,7 @@ namespace ASP.Net_MVC_Core.Models
 
     public class Student
 	{
-		[Key, Column(Order = 0)]
+		[Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 		public string student_code { get; set; }
@@ -26,11 +26,14 @@ namespace ASP.Net_MVC_Core.Models
         public string updated_by { get; set; }
         [ForeignKey("address_id")]
         public int address_id { get; set; }
-        public virtual Address address { get; set; }
+
+		[NotMapped]
+        public Address address { get; set; }
 
 		public virtual ICollection<StudentMark> StudentMarks { get; set; }
+        public virtual ICollection<StudentCalendar> StudentCalendar { get; set; }
 
-		public Student()
+        public Student()
 		{
 			this.id = 0;
 			this.student_code = string.Empty;

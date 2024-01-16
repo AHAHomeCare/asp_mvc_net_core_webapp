@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.Net_MVC_Core.Migrations
 {
     [DbContext(typeof(StudentContext))]
-    [Migration("20240111093027_init_01")]
-    partial class init_01
+    [Migration("20240115094549_update_model_student_calendar")]
+    partial class update_model_student_calendar
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -59,10 +59,6 @@ namespace ASP.Net_MVC_Core.Migrations
                     b.Property<DateTime?>("updated_at")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("updated_by")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("ward_id")
                         .HasColumnType("int");
 
@@ -81,9 +77,6 @@ namespace ASP.Net_MVC_Core.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int?>("Studentid")
-                        .HasColumnType("int");
 
                     b.Property<int>("address_id")
                         .HasColumnType("int");
@@ -125,11 +118,50 @@ namespace ASP.Net_MVC_Core.Migrations
 
                     b.HasKey("id");
 
-                    b.HasIndex("Studentid");
-
                     b.HasIndex("addressid");
 
                     b.ToTable("D_STUDENT");
+                });
+
+            modelBuilder.Entity("ASP.Net_MVC_Core.Models.StudentCalendar", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("Studentid")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("Subjectid")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("created_at")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("created_by")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("student_id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("subject_id")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("Studentid");
+
+                    b.HasIndex("Subjectid");
+
+                    b.ToTable("D_STUDENT_CALENDAR");
                 });
 
             modelBuilder.Entity("ASP.Net_MVC_Core.Models.StudentMark", b =>
@@ -156,7 +188,7 @@ namespace ASP.Net_MVC_Core.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("studentid")
+                    b.Property<int>("studentid")
                         .HasColumnType("int");
 
                     b.Property<string>("subject_id")
@@ -216,15 +248,11 @@ namespace ASP.Net_MVC_Core.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Subject");
+                    b.ToTable("D_SUBJECT");
                 });
 
             modelBuilder.Entity("ASP.Net_MVC_Core.Models.Student", b =>
                 {
-                    b.HasOne("ASP.Net_MVC_Core.Models.Student", null)
-                        .WithMany("Students")
-                        .HasForeignKey("Studentid");
-
                     b.HasOne("ASP.Net_MVC_Core.Models.Address", "address")
                         .WithMany()
                         .HasForeignKey("addressid");
@@ -232,11 +260,30 @@ namespace ASP.Net_MVC_Core.Migrations
                     b.Navigation("address");
                 });
 
+            modelBuilder.Entity("ASP.Net_MVC_Core.Models.StudentCalendar", b =>
+                {
+                    b.HasOne("ASP.Net_MVC_Core.Models.Student", "Student")
+                        .WithMany("StudentCalendar")
+                        .HasForeignKey("Studentid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ASP.Net_MVC_Core.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("Subjectid");
+
+                    b.Navigation("Student");
+
+                    b.Navigation("Subject");
+                });
+
             modelBuilder.Entity("ASP.Net_MVC_Core.Models.StudentMark", b =>
                 {
                     b.HasOne("ASP.Net_MVC_Core.Models.Student", "student")
-                        .WithMany()
-                        .HasForeignKey("studentid");
+                        .WithMany("StudentMarks")
+                        .HasForeignKey("studentid")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("ASP.Net_MVC_Core.Models.Subject", "subject")
                         .WithMany()
@@ -249,7 +296,9 @@ namespace ASP.Net_MVC_Core.Migrations
 
             modelBuilder.Entity("ASP.Net_MVC_Core.Models.Student", b =>
                 {
-                    b.Navigation("Students");
+                    b.Navigation("StudentCalendar");
+
+                    b.Navigation("StudentMarks");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,11 +12,15 @@ namespace ASP.Net_MVC_Core.Models
 
         [ForeignKey("student_id")]
         public string student_id { get; set; }
-        public virtual Student student { get; set; }
+
+        [NotMapped]
+        public Student student { get; set; }
 
         [ForeignKey("subject_id")]
         public string subject_id { get; set; }
-        public virtual Subject subject { get; set; }
+
+        [NotMapped]
+        public Subject subject { get; set; }
 
         [Column(TypeName = "decimal(2, 2)")]
         public decimal mark { get; set; }
