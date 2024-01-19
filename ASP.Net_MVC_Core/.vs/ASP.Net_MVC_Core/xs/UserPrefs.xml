@@ -1,29 +1,32 @@
 ﻿<Properties StartupConfiguration="{8AB8D515-058B-454E-89BA-0D6E7E142340}|http">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/20240115094549_update_model_student_calendar.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Startup.cs">
     <Files>
       <File FileName="Models/Address.cs" />
       <File FileName="Models/Student.cs" />
       <File FileName="Models/StudentMark.cs" />
       <File FileName="Models/Subject.cs" />
-      <File FileName="DataBase/StudentContext.cs" />
+      <File FileName="Models/StudentHelper.cs" Line="175" Column="6" />
+      <File FileName="Controllers/StudentController.cs" Line="13" Column="15" />
       <File FileName="Models/StudentCalendar.cs" />
-      <File FileName="Migrations/20240115094549_update_model_student_calendar.cs" Line="11" Column="42" />
+      <File FileName="Models/Account.cs" Line="6" Column="3" />
+      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
+      <File FileName="Midleware/Authent.cs" Line="32" Column="43" />
+      <File FileName="Startup.cs" Line="40" Column="34" />
+      <File FileName="Controllers/HomeController.cs" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ASP.Net_MVC_Core" selected="True">
+          <Node name="ASP.Net_MVC_Core">
             <Node name="ASP.Net_MVC_Core">
-              <Node name="Migrations" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
-              </Node>
+              <Node name="Middleware" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
@@ -31,6 +34,4 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

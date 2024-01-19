@@ -58,31 +58,37 @@ namespace ASP.Net_MVC_Core.Models
         // Read
         public List<Student> getStudentItems()
         {
-			using(var db = new StudentContext())
-			{
-				var items = db.D_STUDENT
-                            .Join(db.D_ADDRESS,
-                                a => a.address_id,
-                                b => b.id,
-                                (a, b) => new { a, b })
-                            .Select(s => new Student()
-                            {
-                                id = s.a.id,
-                                student_code = s.a.student_code,
-                                name = s.a.name,
-                                birthday = s.a.birthday,
-                                cccd = s.a.cccd,
-                                address_id = s.a.address_id,
-                                address_full = getAddress(s.b),
-                                address = s.b,
-                                status = s.a.status,
-                                created_at = s.a.created_at,
-                                created_by = s.a.created_by
+            try
+            {
+                using (var db = new StudentContext())
+                {
+                    var items = db.D_STUDENT
+                                .Join(db.D_ADDRESS,
+                                    a => a.address_id,
+                                    b => b.id,
+                                    (a, b) => new { a, b })
+                                .Select(s => new Student()
+                                {
+                                    id = s.a.id,
+                                    student_code = s.a.student_code,
+                                    name = s.a.name,
+                                    birthday = s.a.birthday,
+                                    cccd = s.a.cccd,
+                                    address_id = s.a.address_id,
+                                    address_full = getAddress(s.b),
+                                    address = s.b,
+                                    status = s.a.status,
+                                    created_at = s.a.created_at,
+                                    created_by = s.a.created_by
 
-                            })
-                            .ToList();
-				return items;
-			}
+                                })
+                                .ToList();
+                    return items;
+                }
+            }catch(Exception ex)
+            {
+                throw new ArgumentException(ex.Message);
+            }
 
         }
 
@@ -166,7 +172,7 @@ namespace ASP.Net_MVC_Core.Models
         }
 
 
-        private string getAddress(Address item)
+        private static string getAddress(Address item)
 		{
 			string addr = $"{item.number}, {item.ward_name}, {item.district_name}, {item.province_name}";
 			return addr;

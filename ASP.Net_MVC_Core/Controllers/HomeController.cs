@@ -2,10 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using ASP.Net_MVC_Core.Models;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Authentication;
+using ASP.Net_MVC_Core.Migrations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ASP.Net_MVC_Core.Controllers
 {
-
+   
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
