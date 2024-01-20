@@ -1,0 +1,82 @@
+﻿body {
+}
+.head .container {
+    background-color: #000080;
+    /* border-bottom:solid 1px blue;*/
+    padding: 10px;
+}
+.foot .container {
+    background-color:darkgray;
+    border-bottom: solid 1px blue;
+    padding: 10px;
+    color:blue;
+}
+.head_page .title {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+.head_page .logo {
+    width:100px;
+    margin:0;
+    padding:0;
+}
+.head_page .logo img {
+    width: 100%
+    
+}
+.menu_container {
+    background-color: #BCC6CC;
+    margin-top:5px;
+}
+    .menu_container .menu_title {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align:center;
+        color: blue;
+    }
+menu_container .menu_item{
+    border-top:2px solid blue;
+}
+.menu_container .menu_item .item {
+   
+    color: darkblue;
+    width: 100%;
+    border-bottom:1px solid blue;
+    
+}
+.menu_container .menu_item .item a {
+    text-decoration: none;
+}
+.menu_container .menu_item .item:hover {
+    background-color: #98AFC7;
+}
+.list_container
+{
+    padding:5px;
+}
+    .list_container .title {
+        font-size:2em;
+        font-weight:bold;
+    }
+    .list_container .data_grid {
+        margin-top:2px;
+    }
+    .list_container .data_grid table {
+        border:1px solid blue;
+        width:100%;
+    }
+        .list_container .data_grid table tr {
+            border: 1px solid blue;
+        }
+
+        .list_container .data_grid table th{
+            border: 1px solid blue;
+            font-weight:bold;
+            font-size:1,2em;
+            text-align:center;
+        }
+        .list_container .data_grid table td {
+            border: 1px solid blue;
+        }
