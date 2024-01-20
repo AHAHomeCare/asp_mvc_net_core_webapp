@@ -20,7 +20,7 @@ namespace ASP.Net_MVC_Core.Controllers
 
         public IActionResult Index()
         {
-            TempData["data_menu"] = "Hello Data";
+           // TempData["data_menu"] = "Hello Data";
             return View();
         }
 

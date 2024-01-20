@@ -6,6 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using ASP.Net_MVC_Core.Models;
 using Microsoft.AspNetCore.Authorization;
 using ASP.Net_MVC_Core.Middleware;
+using Hanssens.Net;
+using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage;
+using Microsoft.AspNetCore.Http;
 //using Microsoft.AspNetCore.Authorization;
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,6 +17,13 @@ namespace ASP.Net_MVC_Core.Controllers
     [Authorize]
     public class StudentController : Controller
     {
+        private protected HttpContext httpContext { get; set; }
+        private protected ISession _session;
+        public StudentController(IHttpContextAccessor httpContextAccessor)
+        {
+            httpContext = httpContextAccessor.HttpContext;
+            _session = httpContext.Session;
+        }
         // GET: /<controller>/
         public IActionResult Index()
         {

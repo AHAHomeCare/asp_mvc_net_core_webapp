@@ -21,11 +21,13 @@
     <Folder Include="DataBase\" />
     <Folder Include="Middleware\" />
     <Folder Include="Views\Account\" />
+    <Folder Include="Lib\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="DataBase\" />
     <None Remove="Middleware\" />
     <None Remove="Views\Account\" />
+    <None Remove="Lib\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.17" />
@@ -41,5 +43,6 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="LocalStorage" Version="2.1.0" />
   </ItemGroup>
 </Project>

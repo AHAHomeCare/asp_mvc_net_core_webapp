@@ -1,11 +1,14 @@
-﻿@model ASP.Net_MVC_Core.Models.User 
+﻿@model ASP.Net_MVC_Core.Models.User
+@{
+    var returnUrl = @Context.Request.Query["returnurl"];
+}
 <div class="container">
     <div class="row col-md-12">
         Đăng nhập
     </div>
 
     @using (Html.BeginForm("authent", "account", FormMethod.Post))
-    {
+        {
         @Html.AntiForgeryToken()
         <table>
             <tr>

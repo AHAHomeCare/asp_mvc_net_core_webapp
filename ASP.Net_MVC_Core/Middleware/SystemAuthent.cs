@@ -5,15 +5,13 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Identity;
 namespace ASP.Net_MVC_Core.Middleware
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class SystemAuthent
     {
         private readonly RequestDelegate _next;
-
+        private readonly ISession _session;
         public SystemAuthent(RequestDelegate next)
         {
             _next = next;
@@ -21,27 +19,24 @@ namespace ASP.Net_MVC_Core.Middleware
 
         public async Task Invoke(HttpContext httpContext)
         {
-            if (httpContext.User.Identity == null)
-                httpContext.Response.Redirect("/account/login");
 
-            var userName = httpContext.User.Identity.Name;
-            if (!string.IsNullOrEmpty(userName)) // userName = "anonymous";
-            {
-                //  var user = // Retrieve user based on credentials
-                var claims = new List<Claim>
-               {
-                    new Claim(ClaimTypes.Name, userName),
-                   // Add additional claims as needed
-               };
-                var identity = new ClaimsIdentity(claims, "SystemAuth");
-                var principal = new ClaimsPrincipal(identity);
-                httpContext.User = principal;
+                var userName = httpContext.Session.GetString("user_id"); // httpContext.Request.Headers["user_name"];  //httpContext.User.Identity.Name;
+                if (!string.IsNullOrEmpty(userName)) // userName = "anonymous";
+                {
+                    var claims = new List<Claim>
+                   {
+                        new Claim(ClaimTypes.Name, userName),
+                       // Add additional claims as needed
+                   };
+                    var identity = new ClaimsIdentity(claims, "SystemAuth");
+                    var principal = new ClaimsPrincipal(identity);
+                    httpContext.User = principal;
 
-            }
-            else
-                httpContext.User = new ClaimsPrincipal();
+                }
+                else
+                    httpContext.User = new ClaimsPrincipal();
 
-            await _next(httpContext);
+                await _next(httpContext);
         }
     }
 
