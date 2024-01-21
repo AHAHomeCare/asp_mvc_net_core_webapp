@@ -28,6 +28,7 @@ namespace ASP.Net_MVC_Core.DataBase
         public DbSet<StudentMark> D_STUDENT_MARK{ get; set; }
         public DbSet<Subject> D_SUBJECT { get; set; }
         public DbSet<StudentCalendar> D_STUDENT_CALENDAR { get; set; }
+        public DbSet<Class> D_CLASS { get; set; }
     }
 
 }

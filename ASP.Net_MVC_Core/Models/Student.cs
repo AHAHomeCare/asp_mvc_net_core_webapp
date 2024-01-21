@@ -24,8 +24,12 @@ namespace ASP.Net_MVC_Core.Models
 		public string created_by { get; set; }
         public Nullable<DateTime> updated_at { get; set; }
         public string updated_by { get; set; }
+
         [ForeignKey("address_id")]
         public int address_id { get; set; }
+
+		[ForeignKey("class_id")]
+		public int class_id { get; set; }
 
 		[NotMapped]
         public Address address { get; set; }

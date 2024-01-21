@@ -30,7 +30,7 @@ namespace ASP.Net_MVC_Core
 
             services.AddSession(options =>
             {
-                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.IdleTimeout = TimeSpan.FromSeconds(120);
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
@@ -49,8 +49,7 @@ namespace ASP.Net_MVC_Core
             services.AddHttpContextAccessor();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddMvc();
-            services.AddSession();
-           
+          
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -65,16 +64,18 @@ namespace ASP.Net_MVC_Core
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            
-            
-            app.UseStaticFiles();
             app.UseSession();
+
+            app.UseStaticFiles();
+            
             app.UseRouting();
 
             app.UseMiddleware<SystemAuthent>();
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+           
 
             app.UseEndpoints(endpoints =>
             {

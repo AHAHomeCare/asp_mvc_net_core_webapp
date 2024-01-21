@@ -7,7 +7,8 @@ namespace ASP.Net_MVC_Core.Models
 	public class StudentCalendar
 	{
 		[Key]
-		public int id { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int id { get; set; }
 
         [ForeignKey("subject_id")]
         public int subject_id { get; set;}

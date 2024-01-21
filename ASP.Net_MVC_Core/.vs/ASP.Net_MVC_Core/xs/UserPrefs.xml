@@ -1,50 +1,47 @@
 ﻿<Properties StartupConfiguration="{8AB8D515-058B-454E-89BA-0D6E7E142340}|http">
-  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Middleware/SystemAuthent.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Controllers/StudentController.cs" relfile="Controllers/StudentController.cs" line="63" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Account/Login.cshtml">
     <Files>
-      <File FileName="Startup.cs" Line="44" Column="57" IsPinned="True" />
-      <File FileName="Controllers/AccountController.cs" Line="54" Column="1" />
-      <File FileName="Models/AccountHelper.cs" Line="32" Column="29" />
-      <File FileName="Program.cs" Line="10" Column="1" />
-      <File FileName="Middleware/SystemAuthent.cs" Line="24" Column="1" />
-      <File FileName="Lib/LocalStorageService.cs" Line="10" Column="37" />
-      <File FileName="Lib/QueryStringHelper.cs" Line="19" Column="1" />
+      <File FileName="Startup.cs" Line="84" Column="16" IsPinned="True" />
+      <File FileName="Middleware/SystemAuthent.cs" />
+      <File FileName="Controllers/StudentController.cs" Line="65" Column="27" />
+      <File FileName="Controllers/AccountController.cs" Line="38" Column="35" />
+      <File FileName="Models/AccountHelper.cs" />
+      <File FileName="Views/Student/Index.cshtml" Line="18" Column="38" />
+      <File FileName="Views/Student/Create.cshtml" Line="4" Column="14" />
+      <File FileName="Views/Account/Login.cshtml" Line="10" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASP.Net_MVC_Core">
             <Node name="ASP.Net_MVC_Core">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" expanded="True" />
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="DataBase" expanded="True" />
-              <Node name="Lib" expanded="True" />
-              <Node name="Middleware">
-                <Node name="SystemAuthent.cs" selected="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Account" expanded="True" />
-                <Node name="Home" expanded="True" />
+              <Node name="Views">
+                <Node name="Account" expanded="True">
+                  <Node name="Login.cshtml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>user</Value>
+          <Value>user</Value>
+          <Value>userName</Value>
+          <Value>userPass</Value>
+          <Value>httpContext</Value>
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Lib/QueryStringHelper.cs" relfile="Lib/QueryStringHelper.cs" line="15" column="1" />
-      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Controllers/AccountController.cs" relfile="Controllers/AccountController.cs" line="54" column="1" />
-      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Lib/QueryStringHelper.cs" relfile="Lib/QueryStringHelper.cs" line="19" column="1" />
-      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Controllers/AccountController.cs" relfile="Controllers/AccountController.cs" line="46" column="1" />
-      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Models/AccountHelper.cs" relfile="Models/AccountHelper.cs" line="34" column="1" />
-      <Breakpoint file="/Users/hoangdoan/Library/Mobile Documents/com~apple~CloudDocs/EDU/BaiTapLapTrinhWeb_ASP.Net MVC Core/SourceCode/ASP.Net_MVC_Core/Models/AccountHelper.cs" relfile="Models/AccountHelper.cs" line="30" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ASP.Net__MVC__Core PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>
