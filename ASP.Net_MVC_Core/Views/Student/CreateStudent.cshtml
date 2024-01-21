@@ -1,11 +1,11 @@
 ﻿<div class="row container add-new">
     <div class="title">Thêm mới sinh viên</div>
     <div class="data">
-        <form asp-action="Add" asp-controller="Student" method="post">
+        <form asp-action="CreateStudent" asp-controller="Student" method="post">
             <table>
                 <tr>
                     <td class="col-md-3">Mã Sinh Viên: </td>
-                    <td><input class="col-md-9" type="text" disabled name="student_code" /></td>
+                    <td><input class="col-md-9" type="text"  name="student_code" /></td>
                 </tr>
                 <tr>
                     <td class="col-md-3">Họ và Tên: </td>

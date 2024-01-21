@@ -30,7 +30,8 @@ namespace ASP.Net_MVC_Core.Models
 
 		[ForeignKey("class_id")]
 		public int class_id { get; set; }
-
+		[NotMapped]
+		public Class classes { get;set; }
 		[NotMapped]
         public Address address { get; set; }
 

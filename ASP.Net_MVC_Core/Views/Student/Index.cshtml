@@ -21,18 +21,20 @@
                     <th>Họ và tên</th>
                     <th>Ngày sinh</th>
                     <th>Địa chỉ</th>
+                    <th>Lớp học</th>
                 </tr>
                 @{
                     if (Model != null && Model.Any())
                     {
                         foreach (var item in Model)
                         {
-                            <tr>
-                                <td>@item.id</td>
-                                <td>@item.name</td>
-                                <td>@item.birthday.Value.ToString("dd/MM/yyyy")</td>
-                                <td>@item.address_full</td>
-                            </tr>
+                                <tr>
+                                    <td>@item.id</td>
+                                    <td>@item.name</td>
+                                    <td>@item.birthday.Value.ToString("dd/MM/yyyy")</td>
+                                    <td>@item.address_full</td>
+                                    <td>@item.classes.name</td>
+                                </tr>
                         }
                     }
 

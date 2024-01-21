@@ -81,9 +81,11 @@ namespace ASP.Net_MVC_Core.Controllers
                 item.student_code = frmItem["student_code"];
                 item.name = frmItem["student_name"];
                 item.class_id = string.IsNullOrEmpty(frmItem["class_id"])? 0: Convert.ToInt32(frmItem["class_id"]);
-
+                var result = new StudentHelper().create(item);
+                if(result >0)
+                    return RedirectToAction("index");
             }
-            return RedirectToAction("index");
+            return View();
         }
 
         [HttpGet]

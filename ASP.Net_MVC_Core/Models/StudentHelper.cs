@@ -41,10 +41,20 @@ namespace ASP.Net_MVC_Core.Models
             if (item == null) return 0;
             using (var db = new StudentContext())
             {
-                db.D_ADDRESS.Add(item.address);
-                var resultAdd = db.SaveChanges();
-                if (resultAdd == 0) return 0;
-                item.address_id = item.address.id;
+                item.created_at = DateTime.Now;
+                item.created_by = string.Empty;
+                item.updated_at = DateTime.Now;
+                item.updated_by = string.Empty;
+                if (item.address != null)
+                {
+                    db.D_ADDRESS.Add(item.address);
+                    var resultAdd = db.SaveChanges();
+                    if (resultAdd == 0) return 0;
+                    item.address_id = item.address.id;
+                }
+                else
+                    item.address_id = 0;
+                
                 db.D_STUDENT.Add(item);
                 var resultStudent = db.SaveChanges();
                 if (resultStudent == 0) return 0;
@@ -72,6 +82,7 @@ namespace ASP.Net_MVC_Core.Models
                                     id = s.a.id,
                                     student_code = s.a.student_code,
                                     name = s.a.name,
+                                    class_id = s.a.class_id,
                                     birthday = s.a.birthday,
                                     cccd = s.a.cccd,
                                     address_id = s.a.address_id,
@@ -83,6 +94,11 @@ namespace ASP.Net_MVC_Core.Models
 
                                 })
                                 .ToList();
+                    var classItems = db.D_CLASS.ToList();
+                    foreach(var item in items)
+                    {
+                        item.classes = classItems.Where(s => s.id == item.class_id).FirstOrDefault() ?? new Class();
+                    }
                     return items;
                 }
             }catch(Exception ex)
