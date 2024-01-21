@@ -1,0 +1,36 @@
+﻿<div class="row container add-new">
+    <div class="title">Thêm mới sinh viên</div>
+    <div class="data">
+        <form asp-action="Add" asp-controller="Student" method="post">
+            <table>
+                <tr>
+                    <td class="col-md-3">Mã Sinh Viên: </td>
+                    <td><input class="col-md-9" type="text" disabled name="student_code" /></td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Họ và Tên: </td>
+                    <td><input class="col-md-9" type="text" name="student_name" /></td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Lớp: </td>
+                    <td><select name="class_id" required class="col-md-9">
+                            <option value="0" selected>---</option>
+                            @{
+                                if(TempData["class"]!=null)
+                                {
+                                    var itemsClass = (List<Class>)TempData["class"];
+                                    foreach(var item in itemsClass)
+                                    {
+                                        <option value="@item.id">@item.name</option> 
+                                    }
+                                }
+
+                            }
+                        </select>
+                    </td>
+                </tr>
+                <tr><td colspan="2" class="btn"><button type="submit">Thêm</button></td></tr>
+            </table>
+        </form>
+    </div>
+</div>

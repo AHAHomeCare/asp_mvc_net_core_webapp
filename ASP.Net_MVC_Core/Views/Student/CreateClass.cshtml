@@ -1,0 +1,18 @@
+﻿<div class="row container add-new">
+    <div class="title">Thêm mới Lớp học</div>
+    <div class="data">
+        <form asp-action="CreateClass" asp-controller="Student" method="post">
+            <table>
+                <tr>
+                    <td class="col-md-3">Mã lớp: </td>
+                    <td><input type="text" name="class_code" class="col-md-9" /></td>
+                </tr>
+                <tr>
+                    <td class="col-md-3">Tên lớp: </td>
+                    <td><input type="text" name="class_name" class="col-md-9" /></td>
+                </tr>
+                <tr><td colspan="2" style="text-align:center"><button type="submit" class="3">Thêm</button></td></tr>
+            </table>
+        </form>
+    </div>
+</div>

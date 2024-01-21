@@ -19,24 +19,28 @@ namespace ASP.Net_MVC_Core.Middleware
 
         public async Task Invoke(HttpContext httpContext)
         {
-
-                var userName = httpContext.Session.GetString("user_id"); // httpContext.Request.Headers["user_name"];  //httpContext.User.Identity.Name;
-                if (!string.IsNullOrEmpty(userName)) // userName = "anonymous";
+            if (httpContext.User.Identity.IsAuthenticated)
+            {
+                await _next.Invoke(httpContext);
+                return;
+            }
+            var userName = httpContext.Session.GetString("user_id"); // httpContext.Request.Headers["user_name"];  //httpContext.User.Identity.Name;
+            if (!string.IsNullOrEmpty(userName)) // userName = "anonymous";
+            {
+                var claims = new List<Claim>
                 {
-                    var claims = new List<Claim>
-                   {
-                        new Claim(ClaimTypes.Name, userName),
-                       // Add additional claims as needed
-                   };
-                    var identity = new ClaimsIdentity(claims, "SystemAuth");
-                    var principal = new ClaimsPrincipal(identity);
-                    httpContext.User = principal;
+                    new Claim(ClaimTypes.Name, userName),
+                    // Add additional claims as needed
+                };
+                var identity = new ClaimsIdentity(claims, "SystemAuth");
+                var principal = new ClaimsPrincipal(identity);
+                httpContext.User = principal;
 
-                }
-                else
-                    httpContext.User = new ClaimsPrincipal();
+            }
+            else
+                httpContext.User = new ClaimsPrincipal();
 
-                await _next(httpContext);
+            await _next(httpContext);
         }
     }
 

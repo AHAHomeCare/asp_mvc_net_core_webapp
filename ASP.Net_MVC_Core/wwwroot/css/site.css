@@ -20,3 +20,71 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.login {
+    width: 500px;
+    margin: auto;
+    border: 2px solid;
+    padding: 20px;
+}
+    .login .btn-login
+    {
+        text-align:center;
+    }
+.class{
+    width:100%;
+}
+.class table {
+    width: 100%;
+    border:1px solid green;
+}
+    .class table tr {
+        border: 1px solid green;
+    }
+    .class table th {
+        border: 1px solid green;
+    }
+    .class table td {
+        border: 1px solid green;
+    }
+    .class .tbody
+    {
+        margin-top:5px;
+    }
+    .class .title
+    {
+        font-size:2em;
+        font-weight:bold;
+        text-align:center;
+        color:blue;
+        margin:5px;
+    }
+    .add-new{
+        border:1px solid Green;
+    }
+    .add-new .title{
+        font-size:2em;
+        font-weight:bold;
+        text-align:center;
+        color:blue;
+        margin:10px;
+    }
+    .add-new .data {
+      width:100%;
+    }
+        .add-new .data table {
+            width: 100%;
+            border:1px solid Green;
+            margin:10px;
+        }
+/*
+        .add-new .data table tr {
+            border: 1px solid Green;
+        }
+            .add-new .data table tr th{
+                border: 1px solid Green;
+            }
+            .add-new .data table tr td{
+                border: 1px solid Green;
+            }
+            */

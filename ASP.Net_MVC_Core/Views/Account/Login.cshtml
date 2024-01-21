@@ -1,34 +1,47 @@
 ﻿@model ASP.Net_MVC_Core.Models.User
 @{
-    var returnUrl = @Context.Request.Query["returnurl"];
+    Layout = null;
+
 }
-<div class="container">
-    <div class="row col-md-12">
-        Đăng nhập
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - ASP.Net_MVC_Core</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/ASP.Net_MVC_Core.styles.css" asp-append-version="true" />
+    </head>
+    <body>
 
-    @using (Html.BeginForm("authent", "account", FormMethod.Post))
-        {
-        @Html.AntiForgeryToken()
-        <table>
-            <tr>
-                <td>User Name: </td>
-                <td> @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })</td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td> @Html.PasswordFor(m => m.PassWord, new { @class = "form-control" })</td>
-            </tr>
-            <tr>
-                <td>
-                    <button type="submit" class="btn btn-outline-success btn-rounded" value="true" name="Response">Đăng nhập</button>
-                </td>
-                <td>
-                    <button type="submit" class="btn btn-outline-success btn-rounded" value="false" name="Response">Hủy</button>
-                </td>
-            </tr>
-        </table>
+        <div class="container login">
+            <div class="row">
+                Đăng nhập
+            </div>
 
-    }
+            @using (Html.BeginForm("authent", "account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <table>
+                    <tr>
+                        <td>User Name: </td>
+                        <td> @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })</td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td> @Html.PasswordFor(m => m.PassWord, new { @class = "form-control" })</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="btn-login">
+                            <button type="submit" class="btn btn-outline-success btn-rounded" value="true" name="Response">Đăng nhập</button>
+                            <button type="submit" class="btn btn-outline-success btn-rounded" value="false" name="Response">Hủy</button>
+                        </td>
+                    </tr>
+                </table>
 
-</div>
+            }
+
+        </div>
+    </body>
+</html>

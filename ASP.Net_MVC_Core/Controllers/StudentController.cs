@@ -43,9 +43,11 @@ namespace ASP.Net_MVC_Core.Controllers
             return View();
             
         }
-        public IActionResult class_student(int id)
+        public IActionResult Class()
         {
-            return View();
+            var items = new List<Class>();
+            items = new ClassHelper().GetItems(-1);
+            return View(items);
         }
         public IActionResult course(int id)
         {
@@ -58,6 +60,53 @@ namespace ASP.Net_MVC_Core.Controllers
         public IActionResult edu_result(int id)
         {
             return View();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CreateStudent()
+        {
+            var itemsClass = new List<Class>();
+            itemsClass = new ClassHelper().GetItems(1);
+            TempData["class"] = itemsClass;
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateStudent(IFormCollection frmItem)
+        {
+            var item = new Student();
+            if(frmItem!=null)
+            {
+                item.student_code = frmItem["student_code"];
+                item.name = frmItem["student_name"];
+                item.class_id = string.IsNullOrEmpty(frmItem["class_id"])? 0: Convert.ToInt32(frmItem["class_id"]);
+
+            }
+            return RedirectToAction("index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CreateClass()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateClass(IFormCollection frmItem)
+        {
+            var item = new Class();
+            if (frmItem != null)
+            {
+                item.name = frmItem["class_name"];
+                item.code = frmItem["class_code"];
+                var result = new ClassHelper().Create(item);
+                if(result >0)
+                    return RedirectToAction("Class");
+            }
+            return View(item);
+
         }
     }
 }

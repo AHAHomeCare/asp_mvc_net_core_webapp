@@ -2,7 +2,18 @@
 <div class="container">
     <div class="row list_container">
         <div class="title col-12">Danh sách sinh viên </div>
-        <div>Tìm theo mã sinh viêm :  </div>
+        <div class="row">
+            <div class="col-md-6">
+                Tìm theo mã sinh viêm :
+
+            </div>
+            <div class="col-md-6">
+                <button  onclick="location.href='@Url.Action("CreateStudent", "Student")'">
+                    Thêm
+                </button>
+            </div>
+        </div>
+
         <div class="data_grid col-12">
             <table>
                 <tr>
